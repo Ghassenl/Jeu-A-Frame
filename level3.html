@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFI FPS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://codechangers.com/physics.js"></script>
+</head>
+<body>
+    <a-scene id="myScene">
+        <a-entity environment="preset:tron;"></a-entity>
+        <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="black" rotation="-90 0 0"></a-plane>
+        <a-camera id="myCamera" position="0 1.6 0" look-controls="pointerLockEnabled: true; rotationSpeed: 0.9">
+            <a-cursor intersection-spawn="event: click; mixin: voxel" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03">
+            </a-cursor>
+        </a-camera>
+
+        <!-- // Front -->
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-8 8 -60" to="8 6 -40"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="8 4 -60" to="-8 10 -40"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="15 8 -65" to="-8 4 -60"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-10 4 -40" to="10 10 -45"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+                
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="6 6 -35" to="-15 6 -30"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="-10 6 -45" to="10 6 -50"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+        <!-- // Right -->
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="51 4 10" to="50 6 -10"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="45 6 12" to="50 6 3"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="55 14 -15" to="55 4 14"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="50 4 12" to="35 15 -16"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+                
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="50 6 0" to="40 6 -10"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="55 10 -12" to="35 4 5"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+
+        <!-- // Left -->
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-50 6 0" to="-40 6 -10"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-50 4 12" to="-35 15 -16"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-45 6 12" to="-50 6 3"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-55 10 -12" to="-35 4 5"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+                
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="-55 14 -15" to="-55 4 14"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="-51 4 10" to="-50 6 -10"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron> 
+
+        <!-- // Behind -->
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-10 6 45" to="10 6 50"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-torus-knot static-body class="target" arc="180" p="2" q="7" radius="1" radius-tubular="0.1" >
+            <a-animation attribute="material.color"
+                from="blue" to="red"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="0 360 360" dur ="1500"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-10 4 40" to="10 10 45"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-torus-knot>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="-8 8 60" to="8 6 40"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+
+        <a-dodecahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="violet" to="purple"
+                repeat="indefinite" dur="3700"> </a-animation>
+            <a-animation attribute="rotation"
+                to="720 720 0" dur ="3000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+            <a-animation attribute="position"
+                from="6 6 35" to="-15 6 30"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-dodecahedron>
+                
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="15 8 65" to="-8 4 60"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target">
+            <a-animation attribute="material.color"
+            from="yellow" to="gold"
+            repeat="indefinite" dur="3700"> </a-animation>
+        <a-animation attribute="rotation"
+            to="720 720 0" dur ="3000"
+            repeat="indefinite"
+            easing="linear"> </a-animation>
+        <a-animation attribute="position"
+            from="8 4 60" to="-8 10 40"
+            dur ="3000" repeat="indefinite"
+            easing="linear"> </a-animation>
+        </a-icosahedron>
+
+
+        
+
+    </a-scene>
+    
+</body>
+<script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script>
+<script src="script.js"></script>
+<script>nextLevel = 'index.html';</script>
+</html>

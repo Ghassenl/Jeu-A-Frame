@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFI FPS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://codechangers.com/physics.js"></script>
+</head>
+<body>
+    <a-scene id="myScene">
+        <a-entity environment="preset:tron;"></a-entity>
+        <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="black" rotation="-90 0 0"></a-plane>
+        <a-camera id="myCamera" position="0 1.6 0" look-controls="pointerLockEnabled: true; rotationSpeed: 0.9">
+            <a-cursor intersection-spawn="event: click; mixin: voxel" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03">
+            </a-cursor>
+        </a-camera>
+        <!-- // Front -->
+        <a-icosahedron static-body class="target" radius="1" position="-2 5 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="2 5 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="0 10 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="0 17 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="0 25 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-tetrahedron static-body class="target" radius="1" position="4 8 -12" >
+            <a-animation attribute="material.color"
+                from="lightgreen" to="green"
+                repeat="indefinite" dur="3700"> </a-animation>
+                <a-animation attribute="rotation"
+                to="0 360 0" dur ="5000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                
+                <a-animation attribute="position"
+                from="4 8 -12" to="-4 8 -12"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-tetrahedron>
+
+        <a-tetrahedron static-body class="target" radius="1" position="-4 13 -12" >
+            <a-animation attribute="material.color"
+                from="lightgreen" to="green"
+                repeat="indefinite" dur="3700"> </a-animation>
+                <a-animation attribute="rotation"
+                to="0 360 0" dur ="5000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                
+                <a-animation attribute="position"
+                from="-4 13 -12" to="4 13 -12"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-tetrahedron>
+
+        <a-tetrahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="lightgreen" to="green"
+                repeat="indefinite" dur="3700"> </a-animation>
+                <a-animation attribute="rotation"
+                to="0 360 0" dur ="5000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                
+                <a-animation attribute="position"
+                from="4 22 -12" to="-4 22 -12"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-tetrahedron>
+
+        <!-- // Right -->
+
+        <a-icosahedron static-body class="target" radius="1" position="30 3 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="22 3 -10">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-tetrahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="lightgreen" to="green"
+                repeat="indefinite" dur="3700"> </a-animation>
+                <a-animation attribute="rotation"
+                to="0 360 0" dur ="5000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                
+                <a-animation attribute="position"
+                from="18 8 -15" to="27 8 -11"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-tetrahedron>
+
+        <!-- // Left -->
+
+        <a-icosahedron static-body class="target" radius="1" position="-22 3 0">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="-19 3 5">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-tetrahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="lightgreen" to="green"
+                repeat="indefinite" dur="3700"> </a-animation>
+                <a-animation attribute="rotation"
+                to="0 360 0" dur ="5000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                
+                <a-animation attribute="position"
+                from="-15 8 3" to="-24 8 3"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-tetrahedron>
+
+        <!-- // Behind -->
+
+        <a-icosahedron static-body class="target" radius="1" position="-2 5 24">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="8 8 34">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-tetrahedron static-body class="target" radius="1">
+            <a-animation attribute="material.color"
+                from="lightgreen" to="green"
+                repeat="indefinite" dur="3700"> </a-animation>
+                <a-animation attribute="rotation"
+                to="0 360 0" dur ="5000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                
+                <a-animation attribute="position"
+                from="0 6 30" to="6 6 30"
+                dur ="3000" repeat="indefinite"
+                easing="linear"> </a-animation>
+        </a-tetrahedron>
+        
+
+    </a-scene>
+    
+</body>
+<script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script>
+<script src="script.js"></script>
+<script>nextLevel = 'level3.html';</script>
+</html>

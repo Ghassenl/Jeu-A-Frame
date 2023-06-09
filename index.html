@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFI FPS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://codechangers.com/physics.js"></script>
+</head>
+<body>
+    <a-assets loaded>
+        <img id="floor" src="./assets/floor.jpg" crossOrigin="anonymous" alt="floor">
+        <audio id="soundtrack" src="./assets/sound.mp3" crossOrigin="anonymous"></audio>
+    </a-assets>
+    
+    <a-scene id="myScene">
+        <a-entity sound="src: #soundtrack; autoplay: true; volume loop: true; volume:0.1; maxDistance: 1000;"></a-entity>
+        <a-entity environment="preset:tron;"></a-entity>
+        <a-plane id="room"src="#floor"height="30" width="30" rotation="-90 0 0" position="0 -0.02 0" static-body ></a-plane>
+        <a-plane id="floor" static-body height="1000" width="1000" position="0 -0.02 0" color="white" rotation="-90 0 0"></a-plane> 
+        <a-entity camera gamepad-controls look-controls="pointerLockEnabled: true" wasd-controls position="0 1.8 0"></a-entity>
+  <a-entity light="type: hemisphere; color: #FFF; groundColor: #555; intensity: 1"></a-entity>
+  <a-plane rotation="90 0 0" width="100" height="100" color="#669900" position="0 0 49"></a-plane> 
+  <a-sky color="#aef5ff"></a-sky>
+     <!-- changed -->
+    <a-camera id="myCamera" position="0 1.6 0" look-controls="pointerLockEnabled: true; rotationSpeed: 0.9">
+        <a-cursor intersection-spawn="event: click; mixin: voxel" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03">
+        </a-cursor>
+    </a-camera>
+        
+        <!-- // Infront -->
+        <a-icosahedron static-body class="target" radius="1" position="-2 3 -12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+        <a-icosahedron static-body class="target" radius="1" position="2 4 -10">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="-6 3 -15">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="6 3 -10">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <!-- // Right -->
+        <a-icosahedron static-body class="target" radius="1" position="15 3 0">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="15 8 3">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="15 5 -3">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <!-- // Left -->
+        <a-icosahedron static-body class="target" radius="1" position="-15 7 0">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="-15 10 3">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="-15 6 -3">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <!-- // Behind -->
+
+        <a-icosahedron static-body class="target" radius="1" position="-3 3 12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="3 3 12">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="8 4 15">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+        <a-icosahedron static-body class="target" radius="1" position="-8 8 13">
+            <a-animation attribute="rotation"
+                to="360 0 0" dur ="2000"
+                repeat="indefinite"
+                easing="linear"> </a-animation>
+                <a-animation attribute="material.color"
+                from="lightblue" to="blue"
+                repeat="indefinite"> </a-animation>
+        </a-icosahedron>
+
+    </a-scene>
+    
+</body>
+<script src="https://codechangers.com/camps2019/vr/shoot-partial.js"></script>
+<script src="script.js"></script>
+<script>nextLevel = 'level2.html';</script>
+</html>
